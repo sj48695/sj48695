@@ -19,6 +19,7 @@ jobs:
         run: |
           git config user.name Sujeong Jo
           git config user.email sj48695@github.com
+          git remote set-url origin https://x-access-token:${{ secrets.TOKEN }}@github.com/${{ github.repository }}.git
           git add -A .
           git commit -m "generated"
           git push
